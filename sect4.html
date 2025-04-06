@@ -1,0 +1,159 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Include your CSS here */
+    </style>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(20px);
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeSlideUp {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    #sect4-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 18px;
+    }
+
+    .sect4-grid {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: transform 0.3s ease;
+        overflow: hidden;
+    }
+
+    .sect4-grid-overlay-text-wrapper {
+        display: none;
+        animation: slideUp .8s ease forwards;
+    }
+
+    .black-transparent-bg{
+        padding: 20px;
+        box-shadow: 0 0 20px black;
+        height: 100%;
+        opacity: 0;
+        transform: translateY(100%);
+        animation: fadeSlideUp 1s ease-out forwards;
+        animation-delay: 0.2s;
+    }
+
+    .black-transparent-bg > p{
+        font-size: 40px;
+    }
+
+    .sect4-grid:hover .sect4-grid-overlay-text-wrapper {
+        display: block;
+    }
+
+    .sect4-grid-overlay-text {
+        color: whitesmoke;
+        border-radius: 4px;
+        line-height: 25px;
+        margin: 20px 0;
+        font-family: monospace;
+        font-size: 16px;
+        text-align: left;
+        width: 95%;
+    }
+
+    /* Media query for mobile devices */
+    /* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    #sect4-grid {
+        grid-template-columns: auto; /* Force one column on small screens */
+        gap: 10px; /* Reduced gap for small screens */
+    }
+
+    .sect4-grid {
+        height: 300px; /* Reduced height for mobile view */
+    }
+
+    .sect4-grid-overlay-text {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    .black-transparent-bg > p {
+        font-size: 24px; /* Adjust heading font size */
+    }
+}
+
+</style>
+
+<body>
+    <div id="sect4-grid">
+        <div class="sect4-grid" style="background-image: url('https://cdn.prod.website-files.com/67247f5de52e4a1a1589e509/6729ceb685991864f3653827_Ingenuity.avif');">
+            <div class='black-transparent-bg' style="background-color: rgba(0,0,0,0.5); width: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
+                <p>Ingenuity</p>
+                <div class="sect4-grid-overlay-text-wrapper">
+                    <p class="sect4-grid-overlay-text">
+                        The quality of being resourceful lies in making tools and intelligence accessible. We believe that fostering diverse, cross-industry collaboration sparks creative solutions and new perspectives, which are imperative for driving global growth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="sect4-grid" style="background-image: url('https://cdn.prod.website-files.com/67247f5de52e4a1a1589e509/6729ceac9eda488e28a965f6_Intelligence.avif');">
+            <div class='black-transparent-bg' style="background-color: rgba(0,0,0,0.5); width: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
+                <p>Intelligence</p>
+                <div class="sect4-grid-overlay-text-wrapper">
+                    <p class="sect4-grid-overlay-text">
+                        "A rising tide lifts all boats." Cultivating an esteemed, mission-driven community of global leaders, united by a shared vision for transformative impact, is crucial for uniting the best ideas, which in turn lead to impactful outcomes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="sect4-grid" style="background-image: url('https://cdn.prod.website-files.com/67247f5de52e4a1a1589e509/673332f32c2fc57a6a627fa5_Card%20(3).avif');">
+            <div class='black-transparent-bg' style="background-color: rgba(0,0,0,0.5); width: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
+                <p>Wisdom</p>
+                <div class="sect4-grid-overlay-text-wrapper">
+                    <p class="sect4-grid-overlay-text">
+                        To become wise is to harness appropriate resources and acquire the knowledge to contribute to what matters most. At our core, we believe that innovation management is a disciplined and strategic approach essential for driving business success and creating a global impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="sect4-grid" style="background-image: url('https://cdn.prod.website-files.com/67247f5de52e4a1a1589e509/67370490d490887f177853a3_Card%20(5).avif');">
+            <div class='black-transparent-bg' style="background-color: rgba(0,0,0,0.5); width: 100%; display: flex; flex-direction: column; justify-content: flex-end;">
+                <p style="font-size: 40px; transition: transform 0.8s linear">Patience</p>
+                <div class="sect4-grid-overlay-text-wrapper">
+                    <p class="sect4-grid-overlay-text">
+                        Patience empowers long-term vision. Embracing the time it takes to build impactful outcomes allows for reflection, iteration, and growth — foundations of sustainable success and meaningful innovation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
